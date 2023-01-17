@@ -1,3 +1,43 @@
+:root {
+    --myPurple: 8, 0, 24;
+    --purpleButton: 25, 0, 75;
+    --offWhite: 195, 210, 190, 1;
+    --backGrey: 40, 40, 40;
+    --linkBlue: 195, 210, 255, 1;
+}
+
+/* a is between zero and one. */
+
+.myPurple {
+    /*This isn't doing anything right now.*/
+    background-color: rgba(var(--myPurple), 0.70);
+}
+
+#grad1 {
+    /* Standard syntax (must be last) */
+    background-image: radial-gradient(circle at top left, rgba(60,60,60,1), rgba(var(--myPurple), 1));
+}
+
+html {
+    min-height: 100%;
+}
+
+/*body id= grad1 */
+body {
+    height: 100%;
+    font-family: Verdana, Geneva, sans-serif;
+    align-content: center;
+}
+
+img {
+    border: black 2px;
+    border-radius: 12px;
+}
+
+h1, p{
+    color:white;
+}
+
 .btn-primary{
-    background-color: darkblue;
+    background-color: grey;
 }
