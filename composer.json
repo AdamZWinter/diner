@@ -1,0 +1,12 @@
+{
+  "name": "SDEV328/hello",
+  "authors": [
+    {
+      "name": "Adam Winter",
+      "email": "winter.adam@student.greenriver.edu"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
