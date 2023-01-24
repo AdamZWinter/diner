@@ -21,6 +21,20 @@ $f3->route('GET /', function (){
     echo $view->render("views/diner-home.html");
 });
 
+//Define a breakfast route
+$f3->route('GET /breakfast', function (){
+    //Instantiate a view
+    $view = new Template();
+    echo $view->render("views/breakfast.html");
+});
+
+//Define a lunch route
+$f3->route('GET /lunch', function (){
+    //Instantiate a view
+    $view = new Template();
+    echo $view->render("views/lunch.html");
+});
+
 
 
 
