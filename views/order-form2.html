@@ -1,0 +1,61 @@
+<!--breakfast.html-->
+<include href="views/header.html"></include>  <!--This is strictly F3 syntax-->
+
+<div class="container">
+    <h1>Choose your meal.</h1>
+    <!--    <p>Breakfast Menu.</p>-->
+    <!--    <img src="img/pancakes.jpg" height="200" alt="Picture of a stack of pancakes.">-->
+    <br>
+    <br>
+
+    <form id = "order1" action="#" method="post">
+        <div class= "container-fluid">
+            <div class="row">
+
+                <label class="col-sm-4 control-label">Select condiments:</label>
+                <div class="col-sm-4">
+                    <label><input type="checkbox" name="conds[]" value="ketchup">Ketchup</label><br>
+                    <label><input type="checkbox" name="conds[]" value="mustard">Mustard</label><br>
+                    <label><input type="checkbox" name="conds[]" value="siracha">Siracha</label><br>
+                </div>
+
+
+                <div class="col-6">
+<!--                    <label>First Name:              </label>-->
+<!--                    <input type="text" class= "form-control" id="fname" name="fname">-->
+                </div>
+
+                <div class="col-6">
+<!--                    <label>Last Name:               </label>-->
+<!--                    <input type="text" class= "form-control" id="lname" name="lname">-->
+                </div>
+            </div>
+
+
+            <div class="row">
+
+                <div class="col-6">
+                    <label for="message">Notes:</label>
+                    <input type="text" class= "form-control" id="message" name="message" style="height: 100px;">
+                </div>
+
+                <div class="col-6">
+<!--                    <label for="link">Link:</label>-->
+<!--                    <input type="text" class= "form-control" id="link" name="link">-->
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <div>
+                <input class="btn btn-outline-primary" type="submit" value="submit">
+            </div>
+
+        </div>
+    </form>
+
+
+</div>
+
+
+<include href="views/footer.html"></include>  <!--This is strictly F3 syntax-->
