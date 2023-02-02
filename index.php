@@ -40,11 +40,13 @@ $f3->route('GET /lunch', function (){
 
 //Define a route to order form 1
 $f3->route('GET|POST /order1', function () use ($f3) {
+
+    var_dump($_POST);
     if ($_SERVER['REQUEST_METHOD'] ==  'POST'){
         //Move data from POST array to SESSION array
         $_SESSION['meal'] = $_POST['meal'];
         $_SESSION['fname'] = $_POST['fname'];
-        $f3->reroute('summary');
+        $f3->reroute('summary'); //uses PHP header() function
 
     }
     //Instantiate a view
