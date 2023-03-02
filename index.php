@@ -12,6 +12,8 @@ session_start();
 
 //Require autoload file
 require_once('vendor/autoload.php');
+//require_once('model/DinnerMenu.php');
+//var_dump(getMeals());
 
 //Instantiate the F3 Base class
 $f3 = Base::instance();
@@ -47,8 +49,10 @@ $f3->route('GET|POST /order1', function () use ($f3) {
         $_SESSION['meal'] = $_POST['meal'];
         $_SESSION['fname'] = $_POST['fname'];
         $f3->reroute('order2'); //uses PHP header() function
-
     }
+
+    $menu = new myDiner\DinnerMenu();
+    $f3->set('menu', $menu->getMeals());
     //Instantiate a view
     $view = new Template();
     echo $view->render("views/order-form1.html");
