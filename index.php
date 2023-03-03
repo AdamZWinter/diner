@@ -37,11 +37,11 @@ $f3->route('GET /order1', function () use ($f3) {\myDiner\OrderMenu::getOrder1($
 $f3->route('POST /order1', function () use ($f3) {\myDiner\OrderMenu::postOrder1($f3);});
 
 //Define a route to order form 2
-$f3->route('GET /order2', function () use ($f3) {\myDiner\OrderMenu::getOrder2();});
+$f3->route('GET /order2', function () use ($f3) {\myDiner\OrderMenu::getOrder2($f3);});
 $f3->route('POST /order2', function () use ($f3) {\myDiner\OrderMenu::postOrder2($f3);});
 
 //Define a route to summary
-$f3->route('GET /summary', function (){\myDiner\OrderMenu::summary();});
+$f3->route('GET /summary', function () use ($f3) {\myDiner\OrderMenu::summary($f3);});
 
 
 //Run Fat Free

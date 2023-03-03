@@ -4,16 +4,18 @@
 <div class="container">
     <br>
     <br>
-    <h1>Thank you for your order.</h1>
+    <h1>Thank you for order making.</h1>
     <br>
     <br>
+<!--    <p>{{var_dump(@SESSION.order)}}</p>-->
     <p>Your order details.</p>
 <!--    This templating tokens / handlbars / mustache is done by F3-->
-    <p>You ordered {{@SESSION.meal}} for {{@SESSION.fname}} {{@SESSION.lname}}</p>
-    <p>Condiments:  {{@SESSION.condiments}}</p>
-    <p>Message:  {{@SESSION.message}}</p>
-    <p>Link:  {{@SESSION.link}}</p>
-    <p>Notes:  {{@SESSION.notes}}</p>
+    <p>{{@SESSION.order->getFname()}} {{@SESSION.order->getLname()}}:</p>
+    <p>You just ordered {{@SESSION.order->getFood()}} for {{@SESSION.order->getMeal()}}</p>
+    <p>Condiments:  {{@SESSION.order->getCondiments()}}</p>
+    <p>Notes:  {{@SESSION.order->getNotes()}}</p>
+    <p><br></p>
+    <p>Order number is: {{@orderID}}</p>
 <!--    <img src="img/pancakes.jpg" height="200" alt="Picture of a stack of pancakes.">-->
 <!--    <br>-->
 <!--    <br>-->
