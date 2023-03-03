@@ -3,7 +3,7 @@
 namespace myDiner;
 class Menu {
 
-    protected $meals = [];
+    protected array $meals = [];
 
     function getMeals(){
         return $this->meals;

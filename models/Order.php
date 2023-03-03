@@ -12,17 +12,17 @@ class Order
 //
 //    }
 
-    public function getFood()
+    public function getFood(): string
     {
         return 'testFood';
     }
 
-    public function getMeal()
+    public function getMeal(): string
     {
         return 'testMeal';
     }
 
-    public function getCondiments()
+    public function getCondiments(): string
     {
         return 'test Condiments';
     }
